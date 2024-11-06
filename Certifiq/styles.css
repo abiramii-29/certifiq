@@ -5,14 +5,6 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body {
-    /*background-image: url(CertifiQ_BG_FULL.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;*/
-    /*background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb);*/
-    color: #333;
-}
 
 .background{
     background-image: url(CertifiQ_BG_FULL.png);
@@ -34,8 +26,8 @@ body {
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
+    color: #3d0075;
 }
-
 .navbar nav a {
     margin: 0 10px;
     text-decoration: none;
@@ -64,14 +56,16 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    color: #1b1b1b;
+    font-size: 2.5rem;
+    color: white;
     line-height: 1.2;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin: 20px 0;
+    color: white;
+    align-content: center;
 }
 
 .get-started-btn {
@@ -87,10 +81,9 @@ body {
     background-color: #5d239a;
 }
 
-.certificate-preview img {
-    width: 400px;
+.certificate img {
+    width: 100%;
     height: auto;
-    border: 5px solid #ddd;
 }
 
 /* How It Works Section */
@@ -337,18 +330,18 @@ body {
     background: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 20px 0;
-    position: fixed; /* Fix sidebar to the left */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1; /* Ensure sidebar is on top */
+    z-index: 1;
 }
 
 .logo-group {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+    padding-left: 20px; /* Ensure logo aligns with other items */
 }
 
 .dummy-logo {
@@ -388,6 +381,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    flex-grow: 1; /* Pushes the Home link to the bottom */
 }
 
 .sidebar-item {
@@ -398,13 +392,45 @@ body {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     transition: background-color 0.3s;
 }
 
 .sidebar-item:hover {
     color: #fff;
     background-color: #451065;
+}
+
+/* Style for the Home link at the bottom */
+.home-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #581C87;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    margin-top: auto; /* Pushes the Home link to the bottom */
+    padding: 0px 20px;
+    border-radius: 5px;
+}
+
+.home-link img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+/* Hover effect for the Home text only */
+/*.home-link span {
+    color: #581C87;
+    transition: color 0.3s;
+}*/
+
+.home-link:hover span {
+    /*color: #fff;*/
+    text-decoration: underline;
 }
 
 /* Navbar styles */
@@ -628,3 +654,339 @@ body {
     font-size: 0.85rem;
     color: #555;
 }
+
+/*Upload excel*/
+
+.upload-excel-container {
+    /*max-width: 800px;*/
+    margin: auto;
+    padding: 20px;
+    width: calc(100% - 250px); /* Adjust based on the width of your sidebar */
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    /*margin-top: 20px; /* Add margin-top to reduce the gap */
+    position: fixed; /* Fix the welcome section */
+    top: 70px; /* Adjust based on the height of your navbar */
+    left: 58%; /* Center the container horizontally */
+    transform: translateX(-50%); /* Adjust the position to center */
+    z-index: 1; /* Ensure it stays on top */
+    background: white; /* Ensure it has a background color */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-right: 10px;
+}
+
+.upload-excel-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.upload-area {
+    max-width: 900px;
+    border: 2px dashed #8cc0de;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    position: relative;
+    width: 100%;
+}
+
+.upload-area p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.upload-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: #218838;
+}
+
+.file-guidelines {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    width: 800px; /* Width of the box */ 
+    padding: 20px; /* Padding inside the box */ 
+    background-color: white; /* Background color of the box */ 
+    border: 1px solid #ddd; /* Border of the box */ 
+    border-radius: 10px; /* Rounded corners */ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for better visibility */ 
+    width: 73%;
+}
+
+.file-guidelines h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.file-guidelines ul {
+    padding-left: 20px;
+}
+
+.file-guidelines li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/*themes*/
+
+.themes-container {
+    width: calc(100% - 250px); 
+    height: calc(100vh - 70px); 
+    margin: 0; 
+    padding: 20px; 
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3d0075;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    position: fixed;
+    top: 70px; 
+    left: 250px;
+    z-index: 1; 
+    background: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.themes-container h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.theme-group {
+    margin-bottom: 40px;
+    width: 100%; 
+}
+
+.theme-group h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 20px; 
+}
+
+.certificate-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px; 
+}
+
+.certificate-image {
+    width: 250px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; 
+}
+
+.certificate-image:hover {
+    transform: scale(1.05);
+}
+
+/*Certificate preview*/
+
+.customize-certificate-container {
+    width: calc(100% - 250px); /* Full width beside the sidebar */
+    height: calc(100vh - 70px); /* Full height below the navbar */
+    margin: 0; /* Remove any margin */
+    padding: 20px; /* Add padding for spacing */
+    overflow-y: auto;
+    /*box-sizing: border-box;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the content vertically */
+    text-align: center;
+    position: fixed; /* Fix the container */
+    top: 70px; /* Adjust based on the height of your navbar */
+    left: 250px; /* Align to the right of the sidebar */
+    z-index: 1; /* Ensure it stays on top */
+    background: white; /* Ensure it has a background color */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+}
+
+.certificate-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+}
+
+.certificate-preview img {
+    /*max-width: 100%;*/
+    width: 100%; /* Take up full width */
+    height: 100%;
+    /*border-radius: 8px;*/
+    object-fit: contain
+}
+
+/*customize-certificate*/
+
+/* Customize Certificate Section */
+.customize-certificate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-left: 25px; /* Account for the sidebar width */
+    width: calc(100% - 250px); /* Full width minus sidebar */
+}
+
+/* Toolbar */
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    margin-right: 20px;
+}
+
+/* Main content wrapper */
+.main-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Certificate preview area */
+.certificate-customize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%; /* Adjust width as needed */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Certificate image */
+#certificate-customize-image {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Action buttons */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    background-color: #5e2d91;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0 10px; 
+}
+
+.action-buttons button:hover {
+    background-color: #4b2473;
+}
+
+/*email distribution*/
+
+/* Main content styling */
+.main-content {
+    padding: 20px;
+    background-color: #e0e0e0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .email-container {
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .email-container h2 {
+    font-size: 1.2rem;
+    color: #7b3dff;
+    margin-bottom: 10px;
+  }
+  
+  .upload-section {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .email-form {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .email-form h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .email-input, .email-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .email-textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .send-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .send-btn:hover {
+    background-color: #0056b3;
+  }
+  

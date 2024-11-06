@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CertifiQ - Dashboard</title>
+    <title>CertifiQ - Customize Certificate</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -36,7 +36,7 @@
         
         <!-- Navbar -->
         <header class="top-bar">
-            <h1 class="dashboard-title">Dashboard</h1>
+            <h1 class="dashboard-title">Customize Certificate</h1>
             <div class="user-info">
                 <img src="https://via.placeholder.com/40x40" alt="User Profile" class="profile-pic" />
                 <div class="user-details">
@@ -46,56 +46,47 @@
             </div>
         </header>
         <!--  -->
-    </div>
-    <div class="dashboard-content">
-        <div class="welcome-section">
-            <h2>Welcome!</h2>
-            <p>You're all set to start creating!</p>
-        </div>
+        <div class="customize-certificate-container">
         
-        <div class="overview-section">
-            <h3>Certificates & Themes Overview</h3>
-            <p class="status-update">Latest Status Update</p>
-            <div class="overview-cards">
-                <div class="card">
-                    <p>Total Certificates Created</p>
-                    <h2>120</h2>
-                    <div class="icon-check">&#10004;</div>
+            <!-- Main Content Wrapper -->
+            <div class="main-content">
+                <!-- Toolbar -->
+                <div class="toolbar">
+                    <label>Font:</label>
+                    <select id="font-style">
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+                    <label>Font Size:</label>
+                    <input type="number" id="font-size" min="8" max="72" placeholder="12">
+                    <label>Text Color:</label>
+                    <input type="color" id="text-color">
+                    <label>Align:</label>
+                    <select id="text-align">
+                        <option value="left">Left</option>
+                        <option value="center">Center</option>
+                        <option value="right">Right</option>
+                    </select>
+                    <button id="bold-btn">Bold</button>
+                    <button id="italic-btn">Italics</button>
+                    <button id="underline-btn">Underline</button>
                 </div>
-                <div class="card">
-                    <p>Total Themes Available</p>
-                    <h2>16</h2>
-                    <div class="icon-themes">&#128195;</div>
-                </div>
-            </div>
-            <a href="upload.html"><button class="create-btn">Create Certificate Now</button></a>
-        </div>
-    
-        <div class="recent-activity-section">
-            <h3>Recent Activity</h3>
-            <div class="activity-cards">
-                <!-- Example activity card - repeat as needed -->
-                <div class="activity-card">
-                    <img src="certificate.png" alt="Certificate">
-                    <h4>Event Name</h4>
-                    <p>Generated on 2/2/2024</p>
-                    <p>No. of Certificates Generated: 20</p>
-                </div>
-                <div class="activity-card">
-                    <img src="certificate.png" alt="Certificate">
-                    <h4>Event Name</h4>
-                    <p>Generated on 2/2/2024</p>
-                    <p>No. of Certificates Generated: 20</p>
-                </div>
-                <div class="activity-card">
-                    <img src="certificate.png" alt="Certificate">
-                    <h4>Event Name</h4>
-                    <p>Generated on 2/2/2024</p>
-                    <p>No. of Certificates Generated: 20</p>
+                
+                <!-- Certificate customize -->
+                <div class="certificate-customize">
+                    <img src="certificate1.png" alt="Certificate Preview" id="certificate-customize-image">
                 </div>
             </div>
+            
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="add-text-btn">Add Text</button>
+                <button id="add-image-btn">Add Image</button>
+                <button id="save-btn">Save</button>
+            </div>
         </div>
-    </div>   
-
+    </div>
+    </div>
 </body>
 </html>
